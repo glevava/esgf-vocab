@@ -166,6 +166,11 @@
         },
         {
           "required": [
+            "access"
+          ]
+        },
+        {
+          "required": [
             "start_datetime"
           ]
         },
@@ -276,6 +281,18 @@
           "type": "string",
           "const": {{ project_id|tojson }}
         },
+        "access": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "HTTPServer",
+              "Globus"
+              ]
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
         "retracted": {
           "type": "boolean"
         },
