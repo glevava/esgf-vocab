@@ -149,6 +149,11 @@
             "version"
           ]
         },
+        { 
+          "required":[
+            "project"
+          ]
+        }, 
         {
           "required": [
             "retracted"
@@ -266,6 +271,10 @@
         "version": {
           "type": "string",
           "pattern": "^\\d{4}(0[1-9]|1[0-2])(0[1-9]|[12][0-9]|3[01])$"
+        },
+        "project": {
+          "type": "string",
+          "const": {{ project_id|tojson }}
         },
         "retracted": {
           "type": "boolean"
