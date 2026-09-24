@@ -360,14 +360,6 @@ def _merge_field_values(left: dict, right: dict) -> dict:
         ],
     }
 
-#def _catalog_properties_json_processor(
-#    property_translator: CatalogPropertiesJsonTranslator, properties: list[CatalogProperty]
-#) -> list[_CatalogProperty]:
-#    result: list[_CatalogProperty] = list()
-#    for dataset_property_spec in properties:
-#        catalog_property = property_translator.translate_property(dataset_property_spec)
-#        result.append(catalog_property)
-#    return result
 def _catalog_properties_json_processor(
     property_translator: CatalogPropertiesJsonTranslator, properties: list[CatalogProperty],
 ) -> list[_CatalogProperty]:
